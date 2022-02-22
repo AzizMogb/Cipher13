@@ -15,5 +15,4 @@ A simple app to cipher some text using ROT13.
     - Delete all history
 
 ## Screens
-![main_screen](main_screen.png)
-![history_screen](history_screen.png)
+<img src="main_screen.png" width="300">   <img src="history_screen.png" width="300">
