@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".HistoryActivity">
+
+    <TextView
+            android:text="HISTORY"
+            android:layout_width="340dp"
+            android:layout_height="68dp"
+            android:id="@+id/historyTitle"
+            android:textSize="55sp"
+            android:gravity="center_horizontal"
+            app:fontFamily="@font/work_sans_semibold"
+            android:textStyle="normal|bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="74dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="75dp"
+            app:layout_constraintBottom_toTopOf="@+id/verText" />
+
+    <Button
+            android:text="Main Screen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/toMain"
+            android:background="@drawable/button_style"
+            android:textColor="#FFFFFF"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintStart_toStartOf="@+id/guidelineCenter"
+            android:layout_marginStart="8dp"
+            android:rotationX="0" />
+
+    <Button
+            android:text="Delete All"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteHistory"
+            android:background="@drawable/button_style"
+            android:textColor="#FFFFFF"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineCenter"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="8dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guidelineRight"
+            app:layout_constraintGuide_end="32dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_begin="32dp"
+            android:id="@+id/guidelineLeft" />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/recyclerView"
+            android:padding="4dp"
+            android:clipToPadding="false"
+            tools:listitem="@layout/items"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/historyTitle"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/deleteHistory"
+            android:layout_marginBottom="4dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/guidelineCenter"
+            app:layout_constraintGuide_begin="205dp" />
+
+    <!--    <ScrollView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="0dp"-->
+    <!--                app:layout_constraintEnd_toStartOf="@+id/guidelineRight"-->
+    <!--                app:layout_constraintStart_toStartOf="@+id/guidelineLeft" app:layout_constraintHorizontal_bias="0.0"-->
+    <!--                app:layout_constraintTop_toBottomOf="@+id/historyTitle" android:layout_marginTop="4dp"-->
+    <!--                app:layout_constraintBottom_toTopOf="@+id/deleteHistory" android:layout_marginBottom="4dp">-->
+    <!--        <TextView android:layout_width="match_parent"-->
+    <!--                  android:layout_height="match_parent"-->
+    <!--                  android:id="@+id/tv_history"-->
+    <!--                  android:text="\n\n\n\n\n\n\n\n\n\n\nNo history!"-->
+    <!--                  android:gravity="center_horizontal"-->
+    <!--                      android:enabled="true"-->
+    <!--                      android:textIsSelectable="true"-->
+    <!--                      android:focusable="true"-->
+    <!--                      android:longClickable="true"-->
+    <!--                  android:textColor="#000000" android:textSize="18sp"/>-->
+
+    <!--    </ScrollView>-->
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
