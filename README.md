@@ -14,3 +14,6 @@ A simple app to cipher some text using ROT13.
     - Delete old ciphered text
     - Delete all history
 
+## Screens
+![main_screen](main_screen.png)
+![history_screen](history_screen.png)
